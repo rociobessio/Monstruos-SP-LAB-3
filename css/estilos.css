@@ -1,0 +1,303 @@
+body{
+    color: #f4891dd7;
+    background-color: #1c0731f4;/*El color del fondo del body lo modifico*/
+    font-family: 'MidnightMinutes';
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'MidnightMinutes';
+    src: url('../fonts/MidnightMinutes_DEMO.otf');
+}
+
+/* CAMBIAR CURSOR */
+html{
+    cursor: url('../cursor/cursor.apng'),auto;
+}
+/* 
+a:hover{
+} */
+
+/* MEDIA QUERYS */
+/* Me permitira modificar la imagen del body */
+.img-body{
+    background-image: url("../img/background2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: max-content;
+    width: 100vw;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.texto-principal{
+    justify-content: start;
+    padding-left: 10%;
+    padding-top: 25%;
+    color: darkorange;
+}
+
+.header{
+    /* background-color: #322b24d7; */
+    color: beige;
+    padding: 20px;
+}
+
+/* modificacion del logo achico*/
+.logo-pagina img{ height: 80px;}
+
+.menu-icono{
+    display: none;
+    font-size: 26px;
+    padding: 25px 10px;
+}
+
+.navbar-1{
+    background-image: url("../img/header3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-color: #322b24d7;
+    background: transparent; */
+    height: 90px;
+    color: beige;
+}
+
+.nav-container{
+    display: flex;
+    margin: auto;
+    width: 85%;
+    justify-content: space-between;
+    align-items: center;
+    max-width:1000px;
+    height:inherit;
+    overflow: hidden;
+}
+
+nav .links-pagina{
+    display: inline-block;
+    padding: 5px 0;
+    margin-right: 15px;
+    font-size: 18px;
+    font-weight: 300;
+    text-decoration: none;
+    border-bottom: 4px solid transparent;
+    color: inherit;
+}
+
+/*Al pararme sobre los links que cambie el color de abajo
+y que haga una pequeña transicion*/
+nav .links-pagina a:hover{
+    border-bottom: 3px solid #f4891dd7 ;
+    transition: 0.6s;
+    
+    /* cursor: url('../cursor/cursor-hover.apng'),auto; */
+}
+
+.enlinea{
+    justify-content: space-around;
+    display: inline-flex;
+}
+
+.pie-de-pagina {
+    bottom: 0;
+    width: 100%;
+    /* position: fixed;*/
+    background-color: #1c0731f4;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+
+/*Estilo para el btn ancla*/
+#btnArriba {
+    display: none; /*inicia oculto*/
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 200px;  
+    height: 200px;  
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/************************ ESTILOS PARA EL FORMULARIO ************************************************************/
+.campo {
+    margin: 10px 0; /* Espacio entre campos */
+}
+
+.icono{
+    width: 40px ;
+    height: 30px;
+    /* margin-right: 50px; */
+}
+
+label {
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+    margin-right: 2%;
+    font-size: 1.5vw;
+}
+
+.formulario {
+    border-radius: 5px;
+    background-color: #a15810d7;
+    padding: 2%;
+    margin: 0 auto;
+    max-width: 500vw;
+    color: beige;
+}
+
+.hide{
+    display: none;
+}
+/* Para el aleert */
+.customizable-alert{
+    background-color: #40037df4;
+    color: #aae470;
+    border-color: #aae470;
+}
+
+/* Estilo para los input */
+input[type="text"],
+input[type="number"],
+input[type="radio"],
+input[type="select"] {
+    width: 65%;
+    padding: 1vw;
+    margin: 0.5vw 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+input[type="text"],
+input[type="number"]{
+
+    cursor: url('../cursor/cursor-write.apng'),
+    auto;
+}
+
+input[type="radio"],
+input[type="option"], 
+input[type="range"]{
+    cursor: url('../cursor/cursor.apng'),auto;
+}
+
+fieldset {
+    border: 2px solid #a15810d7; /* Establece el borde del fieldset */
+    border-radius: 5px;
+    padding: 10px; /* Ajusta el espacio interno del fieldset */
+    margin: 10px auto; /* Centra el fieldset y agrega margen superior e inferior */
+    max-width: 500px;
+    color: beige;
+}
+
+/****************************************************BOTONES*********************************************************/
+/*ajustes de botón*/
+button[type=submit]{
+    width: 100%;
+    background-color: #40037df4;
+    color: white;
+    padding: 12px 10px;
+    margin: 8px 0;
+    /* height: 10vh; */
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type=reset],
+#btnEliminar{
+    width: 100%;
+    background-color:brown;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type=reset],
+#btnEliminar:hover{
+    background-color:rgba(139, 0, 0, 0.776);
+}
+
+button[type=submit]:hover{
+    background-color: #1c0731f4;
+}
+
+/* Para cambiarle el cursor a 
+los botones */
+button[type=reset],
+#btnEliminar:hover,
+button[type=submit],
+#btnArriba,
+a:hover{
+    cursor: url('../cursor/cursor-hover.apng'),auto;
+}
+.hidden{
+    display:none;
+}
+/******************************************************* TABLA *****************************************************/
+
+#tablaDinamica{
+    justify-content: center;
+    /* display: none; */
+    /* width: ; */
+    align-items: center;
+}
+
+th{
+    background-color: blanchedalmond;
+    color: #1c0731f4;
+    width: 40vw;
+    text-transform: capitalize;
+}
+
+td{ border: 0.5px dotted blanchedalmond;}
+
+/***********************************************  SPINNER **************************************************************/
+#spinner { 
+    justify-content: center;
+    position: absolute;
+}
+
+#spinner-girando
+{
+    width: 100%;
+    height: 100%;
+}
+
+/***********************************************  MEDIA QUERYS **************************************************************/
+/* Para celular modifico la screen width */
+@media screen and (max-width: 500px){
+
+    .menuIcon{
+        display:block;
+        cursor: pointer;
+    }
+}
+/* Para laptops modifico la screen width */
+@media only screen and (min-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+}

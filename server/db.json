@@ -1,0 +1,186 @@
+{
+  "monstruos": [
+    {
+      "id": 1,
+      "nombre": "Martu crying",
+      "fuerza": 19,
+      "alias": "Marrrr",
+      "defensa": "Plata",
+      "miedo": 66,
+      "tipo": "Fantasma"
+    },
+    {
+      "id": 1699761478276,
+      "nombre": "Cucaracha Gigante",
+      "fuerza": 24,
+      "alias": "Dr. Cucaracha",
+      "defensa": "Plata",
+      "miedo": 70,
+      "tipo": "Otro"
+    },
+    {
+      "id": 1699764476609,
+      "nombre": "Vladimir Kov",
+      "fuerza": 100,
+      "alias": "Dracula",
+      "defensa": "Crucifijo",
+      "miedo": 91,
+      "tipo": "Vampiro"
+    },
+    {
+      "id": 1699907109502,
+      "nombre": "Nikola Svenko",
+      "fuerza": 19,
+      "alias": "Jeff Sin Manos",
+      "defensa": "Plata",
+      "miedo": 81,
+      "tipo": "Vampiro"
+    },
+    {
+      "id": 1700005597419,
+      "nombre": "Minotauro",
+      "fuerza": 31,
+      "alias": "Minotauro",
+      "defensa": "Plata",
+      "miedo": 68,
+      "tipo": "Otro"
+    },
+    {
+      "id": 1700005617725,
+      "nombre": "Ciclope",
+      "fuerza": 41,
+      "alias": "Ciclope",
+      "defensa": "Crucifijo",
+      "miedo": 75,
+      "tipo": "Ogro"
+    },
+    {
+      "id": 1700056621855,
+      "nombre": "Victor Frankestein",
+      "fuerza": 91,
+      "alias": "Frankestein",
+      "defensa": "Plata",
+      "miedo": 87,
+      "tipo": "Mutante"
+    },
+    {
+      "id": 1700057024042,
+      "nombre": "Casper II",
+      "fuerza": 14,
+      "alias": "Casper",
+      "defensa": "Plata",
+      "miedo": 15,
+      "tipo": "Fantasma"
+    },
+    {
+      "id": 1700057938378,
+      "nombre": "Sullivan INC",
+      "fuerza": 100,
+      "alias": "Sullivan",
+      "defensa": "Estaca",
+      "miedo": 83,
+      "tipo": "Mutante"
+    },
+    {
+      "id": 1700060045093,
+      "nombre": "Shrek Pantanoso",
+      "fuerza": 51,
+      "alias": "Shrek",
+      "defensa": "Plata",
+      "miedo": 91,
+      "tipo": "Ogro"
+    },
+    {
+      "id": 1700070769710,
+      "nombre": "Hellhound",
+      "fuerza": 73,
+      "alias": "Hellhound  II",
+      "defensa": "Plata",
+      "miedo": 91,
+      "tipo": "Otro"
+    },
+    {
+      "id": 1700090645330,
+      "nombre": "Hellbound I",
+      "fuerza": 65,
+      "alias": "Lobizon",
+      "defensa": "Crucifijo",
+      "miedo": 78,
+      "tipo": "Hombre Lobo"
+    },
+    {
+      "id": 1700592361708,
+      "nombre": "Fiona",
+      "fuerza": 30,
+      "alias": "Fiona",
+      "defensa": "Plata",
+      "miedo": 88,
+      "tipo": "Ogro"
+    },
+    {
+      "id": 1700592479537,
+      "nombre": "Terry Bridge",
+      "fuerza": 17,
+      "alias": "El Hombre Invisible",
+      "defensa": "Estaca",
+      "miedo": 11,
+      "tipo": "Otro"
+    },
+    {
+      "id": 1700592650140,
+      "nombre": "Tylor Tuskmon",
+      "fuerza": 40,
+      "alias": "Tuskdemon",
+      "defensa": "Estaca",
+      "miedo": 12,
+      "tipo": "Otro"
+    },
+    {
+      "id": 1700593463492,
+      "nombre": "Brujilliza",
+      "fuerza": 12,
+      "alias": "Brujilliza I",
+      "defensa": "Pocion",
+      "miedo": 79,
+      "tipo": "Bruja"
+    },
+    {
+      "id": 1700593512534,
+      "nombre": "Calvin ",
+      "fuerza": 17,
+      "alias": "Calvin el zombie",
+      "defensa": "Crucifijo",
+      "miedo": 78,
+      "tipo": "Zombie"
+    },
+    {
+      "id": 1700597427287,
+      "nombre": "Jack ",
+      "fuerza": 15,
+      "alias": "Jack huesudo",
+      "defensa": "Plata",
+      "miedo": 10,
+      "tipo": "Esqueleto"
+    },
+    {
+      "id": 1700608289112,
+      "nombre": "test Alta mod",
+      "fuerza": 74,
+      "alias": "Alta ",
+      "defensa": "Crucifijo",
+      "miedo": 42,
+      "tipo": "Zombie"
+    }
+  ],
+  "tipoMonstruos": [
+    "Otro",
+    "Esqueleto",
+    "Zombie",
+    "Vampiro",
+    "Fantasma",
+    "Bruja",
+    "Hombre Lobo",
+    "Ogro",
+    "Mutante"
+  ]
+}

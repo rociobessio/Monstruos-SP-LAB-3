@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CDN BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="./css/estilos.css">
+
+    <!-- CDN AXIOS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- LINK JS -->
+    <script src="./js/script.js" type="module" defer></script>
+
+    <!-- LINK ICON PAGINA -->
+    <link rel="shortcut icon" href="./img/icons/icon.ico" type="image/x-icon">
+
+    <title>PP 2023 HALLOWEEN</title>
+</head>
+<body>
+    <!-- ENCABEZADO -->
+    <header>
+        <section class="navbar-1">
+            <nav class="nav-container">
+                <div class="menu-icono" id="abierto"></div>
+                <div class="logo-pagina">
+                    <a href="#"><img src="./img/icons/icon.png" alt="iconoPagina"></a>
+                </div>
+
+                <!-- Hipervinculos -->
+                <div class="links-pagina" id="links-pagina">
+                    <a class="links-pagina" href="#" id="enlace-inicio">Home</a>
+                    <a class="links-pagina" href="./templates/monstruos.html">Monstruos</a>
+                    <a class="links-pagina" href="">Blog</a>
+                    <a class="links-pagina" href="">Contacto</a>
+                </div>
+            </nav>
+        </section>
+
+        <br>
+        <section>
+            <h1 align="center">CRUD MONSTRUOS</h1>
+        </section>
+    </header>
+    <!-- CUERPO PRINCIPAL -->
+    <main>
+        <br>
+        </div>
+        <section class="img-body">
+            <article class="texto-principal">
+                <h1>SE ESTAN ACERCANDO LOS MONSTRUOS</h1>
+                <h1>MÁS RECONOCIDOS MUNDIALMENTE</h1>
+                <h1>A NUESTRO HOTEL, AYUDANOS A REGISTRARLOS</h1>
+            </article>
+            
+            <fieldset>
+                <legend align="center">INFORMACION DEL MONSTRUO</legend>
+            <!-- FORMULARIO -->
+                <form class="formulario">
+                    <div class="campo">
+                        <label for="txtNombre">Nombre</label>
+                        <input type="text" name="txtNombre" placeholder="Ingrese Nombre" required autocomplete="off">
+                    </div>
+                    <div class="campo">
+                        <label for="txtAlias"><img src="./img/icons/mask-icon.png" alt="mask-icon" class="icono" >Alias</label>
+                        <input type="text" name="txtAlias" placeholder="Ingrese Alias" required autocomplete="off">
+                    </div>
+                    <div class="campo">
+                        <label for="defensa"><img src="./img/icons/potion-icon.png" alt="potion-icon" class="icono">Defensa</label>
+                        <!-- <img src="./img/icons/potion.png" alt="potion-img"> -->
+                        <div class="enlinea">
+                            <input type="radio" name="defensa" id="defensaPocion" value="Pocion" checked>
+                            <label for="defensaPocion">Pocion</label>
+                            <input type="radio" name="defensa" id="defensaCrucifijo" value="Crucifijo">
+                            <label for="defensaCrucifijo">Crucifijo</label>
+                            <input type="radio" name="defensa" id="defensaEstaca" value="Estaca">
+                            <label for="defensaEstaca">Estaca</label>
+                            <input type="radio" name="defensa" id="defensaPlata" value="Plata">
+                            <label for="defensaPlata">Plata</label>
+                        </div>
+                    </div> 
+
+                    <div class="campo">
+                        <label for="miedo"><img src="./img/icons/monster.png" alt="monster-icon" class="icono">Miedo</label>
+                        <input type="range" name="rangeMiedo" id="miedo" min="1" max="100">
+                    </div>
+
+                    <div class="campo">
+                        <label for="fuerza">Fuerza</label>
+                        <input type="range" name="rangeFuerza" id="fuerza" min="1" max="100">
+                    </div>
+
+                    <div class="campo">
+                        <label for="tipo"><img src="./img/icons/werewolf-icon.png" alt="werewolf-icon" class="icono">Tipo</label>
+                        <select name="tipo" id="IDTipo" required>
+                        </select>      
+                    </div>
+
+                    <!-- Implementacion con bootstrap me permite mostrar un alert -->
+                    <div class="alert alert-warning alert-dismissible fade show hide customizable-alert" role="alert" id="alertId">
+                        <span id="mensajeAlerta"></span>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+    
+                    <!-- BOTONES -->
+                    <section align="center" id="botones">
+    
+                        <button type="submit" id="btnEnviar" class="btnForm">
+                            <img src="./img/icons/guardar-icon.png" alt="guardar-icon" class="icono">
+                            <h4>Guardar</h4>
+                            <!-- Guardar -->
+                        </button>
+                        
+                        <!-- ID OCULTA -->
+                        <input type="hidden" name="txtId" id="idFormulario">
+                
+                        <button type="reset" id="btnReset" class="btnForm">
+                            <h4>Cancelar</h4>
+                        </button>
+                        
+                        <button type="submit" id="btnModificar" class="btnForm hidden">
+                            <h4>Modificar</h4>
+                        </button>
+                        
+                        <button type="button" id="btnEliminar" class="btnForm hidden" value="Eliminar Propiedad">
+                            <h4>Eliminar</h4>
+                        </button>
+                    </section>
+                </form>
+            </fieldset>
+        </section>
+
+        
+        <!-- FILTRADO Y CHECKBOXES BOOTSTRAP -->
+        <section class="filter">
+            <div class="container-fluid text-center col-md-7">
+                <h2 class="text-center">FILTROS</h2>
+                <div class="list-inline-item">
+                    <label for="filtrado" class="text-orange text-center">Filtrar:</label>
+                    <!-- SE CARGA CON EL CONTENIDO DEL db.json -->
+                    <select name="filtrado" id="filtrado" class="form-control form-select-sm">
+                    </select>
+                    <!-- Se muestra un input de solo lectura con el promedio del MIEDO de los monstruos en la tabla -->
+                    <label for="promedio" style="height: 5px; color: #aae470;">Promedio</label>
+                            <input type="text" name="txtPromedio" id="promedio" class="form-control form-select-sm" placeholder="N/A" disabled style="height: 5px;"/>
+                        </div>
+                </div>
+            </div>
+
+            <!-- Esto es para los check-boxes y que columna se mostrara en la tabla -->
+            
+            <!-- Agregar controles que permitan seleccionar las columnas que deben aparecer en la tabla
+                 de monstruos. Por defecto todas las columnas deben ser visibles -->
+            <div class="container-fluid text-center col-md-7" >
+                <div class="row container-fluid">
+                    <div class="col  bg-info bg-opacity-25 border mb-3 form-check">
+                        <input style="background-color: orange;" type="checkbox" class="form-check-input chbox" id="cboNombre" value="nombre" name="nombre" checked/>
+                        <label class="form-check-label text-orange p-2" for="cboNombre">Nombre</label>
+                    </div>
+                    <div class="col  bg-info bg-opacity-25 border mb-3 form-check">
+                        <input style="background-color: orange;" type="checkbox" class="form-check-input chbox" id="cboAlias" value="alias" name="alias" checked/>
+                        <label class="form-check-label text-orange p-2" for="cboAlias">Alias</label>
+                    </div>
+                    <div class="col  bg-info bg-opacity-25 border mb-3 form-check">
+                        <input style="background-color: orange;" type="checkbox" class="form-check-input chbox" id="cboDefensa" value="defensa" name="defensa" checked/>
+                        <label class="form-check-label text-orange p-2" for="cboDefensa">Defensa</label>
+                    </div>
+                    <div class="col  bg-info bg-opacity-25 border mb-3 form-check">
+                        <input style="background-color: orange;" type="checkbox" class="form-check-input chbox" id="cbMiedo" value="miedo" name="miedo" checked/>
+                        <label class="form-check-label text-orange p-2" for="cboMiedo">Miedo</label>
+                    </div>
+                    <div class="col  bg-info bg-opacity-25 border mb-3 form-check">
+                        <input style="background-color: orange;" type="checkbox" class="form-check-input chbox" id="cboFuerza" value="fuerza" name="fuerza" checked/>
+                        <label class="form-check-label text-orange p-2" for="cboFuerza">Fuerza</label>
+                    </div>
+                    <div class="col  bg-info bg-opacity-25 border mb-3 form-check">
+                        <input style="background-color: orange;" type="checkbox" class="form-check-input chbox" id="cboTipo" value="tipo" name="tipo" checked/>
+                        <label class="form-check-label text-orange p-2" for="cboTipo">Tipo</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div id="spinner"></div>
+
+        <section>
+            <br>
+            <h1 align="center" id="lblMonstruos">Lista de Monstruos</h1> 
+        </section>
+
+        <!-- Tabla -->
+        <br>
+        <section align='center'>
+            <div id="tablaDinamica" class="Tabla table-responsive"> 
+            </div>            
+        </section>
+
+        
+        <!-- Ancla -->
+        <a href="#"><img src="../img/icons/icon-go-up.png" alt="anclaImagen" id="btnArriba"></a>
+
+    </main>
+    <!-- Pie de pagina -->
+    <footer class="pie-de-pagina">
+        <section>
+            <nav class="nav1 enlinea">
+                <div class="links-pagina" id="links-pagina">
+                    <a class="links-pagina" href="#" id="enlace-inicio">Home</a>
+                    <a class="links-pagina" href="./templates/monstruos.html">Monstruos</a>
+                    <a class="links-pagina" href="#">Blog</a>
+                    <a class="links-pagina" href="#">Contacto</a>
+                </div>
+                <p>bessio rocio soledad 2023 @allrightsreserved</p>
+            </nav>
+        </section>
+    </footer>
+</body>
+</html>
